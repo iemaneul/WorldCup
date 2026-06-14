@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Copa do Mundo | Jogos</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;700&family=Manrope:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/styles.css">
+    <script src="static/js/nav-component.js" defer></script>
+    <script src="static/js/app-router.js" defer></script>
+</head>
+<body class="page-jogos">
+    <main id="page-content">
+        <h1>Agenda de jogos</h1>
+
+        <div class="games-list">
+            <div class="game-card">
+                <div class="game-info group-a background fwc-normal">
+                    <span class="game-date">20/11/2022</span>
+                    <span class="game-time">13:00</span>
+                </div>
+                <div class="teams group-a-game">
+                    <div class="team t-1">
+                        <img src="static/images/flags/mx.svg" alt="México">
+                        <span class="team-name">MEX</span>
+                    </div>
+                    <div class="vs">
+                        <span class="value">2</span>
+                        <span class="vs">vs</span>
+                        <span class="value">0</span>
+                    </div>
+                    <div class="team t-2">
+                        <span class="team-name">RSA</span>
+                        <img src="static/images/flags/za.svg" alt="África do Sul">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <floating-nav current="jogos"></floating-nav>
+</body>
+</html>

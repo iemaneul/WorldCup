@@ -1,0 +1,332 @@
+@font-face {
+    font-family: "FWC 2026 Condensed";
+    src: url("../fonts/FWC2026-CondensedLight.c11e508e.ttf") format("truetype");
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "FWC 2026 Expanded";
+    src: url("../fonts/FWC2026-ExpandedBlack.e49451e9.ttf") format("truetype");
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "FWC 2026 Normal";
+    src: url("../fonts/FWC2026-NormalRegular.77c3c249.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "FWC 2026 Normal";
+    src: url("../fonts/FWC2026-NormalBlack.2bd896c8.ttf") format("truetype");
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "FWC 2026 Semi Expanded";
+    src: url("../fonts/FWC2026-SemiExpandedBlack.e378fa1c.ttf") format("truetype");
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "FWC 2026 Ultra Condensed";
+    src: url("../fonts/FWC2026-UltraCondensedMedium.4da29b9d.ttf") format("truetype");
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "FWC 2026 Ultra Condensed";
+    src: url("../fonts/FWC2026-UltraCondensedBold.0e7149b5.ttf") format("truetype");
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "FWC 2026 Ultra Condensed";
+    src: url("../fonts/FWC2026-UltraCondensedBlack.8e6ba053.ttf") format("truetype");
+    font-weight: 900;
+    font-style: normal;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    transition: opacity 0.18s ease;
+}
+
+body.is-transitioning {
+    opacity: 0.98;
+}
+
+.floating-nav {
+    position: fixed;
+    left: 50%;
+    bottom: 16px;
+    transform: translateX(-50%);
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    align-items: center;
+    gap: 8px;
+    width: min(calc(100vw - 16px), 520px);
+    padding: 8px;
+    border-radius: 999px;
+    background: #111111;
+}
+
+.nav-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 54px;
+    border-radius: 999px;
+    color: #ffffff;
+    text-decoration: none;
+    transition: transform 0.2s ease, background-color 0.2s ease, opacity 0.2s ease;
+}
+
+.nav-item.is-active {
+    background: #4b4b4b;
+}
+
+.icon-wrap {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+}
+
+.icon-wrap svg {
+    width: 100%;
+    height: 100%;
+    stroke: currentColor;
+    stroke-width: 1.8;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    fill: none;
+}
+
+.nav-item.is-active .icon-wrap svg {
+    stroke-width: 2.1;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+@media (max-width: 620px) {
+    .floating-nav {
+        width: calc(100% - 16px);
+        bottom: 12px;
+        gap: 6px;
+        padding: 7px;
+    }
+
+    .nav-item {
+        min-height: 48px;
+    }
+
+    .icon-wrap {
+        width: 24px;
+        height: 24px;
+    }
+}
+
+.fwc-normal {
+    font-family: "FWC 2026 Normal", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.group-a.background {
+    background: #55BE69;
+}
+
+.group-b.background {
+    background: #55BE69;
+}
+
+.group-c.background {
+    background: #F9901B;
+}
+
+.group-d.background {
+    background: #1F68B5;
+}
+
+.group-e.background {
+    background: #5E479F;
+}
+
+.group-f.background {
+    background: #B0C626;
+}
+
+.group-g.background {
+    background: #F45992;
+}
+
+.group-h.background {
+    background: #62C5B0;
+}
+
+.group-i.background {
+    background: #62C5B0;
+}
+
+.group-j.background {
+    background: #187183;
+}
+
+.group-k.background {
+    background: #187183;
+}
+
+.group-l.background {
+    background: #44B6E8;
+}
+
+.games {
+    padding: 16px;
+}
+
+.page-jogos {
+    padding: 20px;
+    min-height: 100vh;
+    background-image:
+        url("../images/background-left-bottom.png"),
+        url("../images/background-right-top.png");
+    background-repeat: no-repeat, no-repeat;
+    background-position: left 100%, right 0;
+    background-size: auto 50vh, auto 50vh;
+}
+
+.page-jogos h1 {
+    font-family: "FWC 2026 Condensed", sans-serif;
+    font-weight: 300;
+    font-size: 32px;
+    color: #333333;
+}
+
+.page-jogos .game-list .game-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    padding: 12px;
+    border-radius: 8px;
+    background: #ffffffcc;
+}
+
+.game-info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-family: "FWC 2026 Condensed", sans-serif;
+    font-size: 18px;
+    color: #000000;
+    height: 35px;
+    border-radius: 10px 10px 0px 0px;
+    padding-top: 8px;
+}
+
+.group-a-game {
+    border-top: none;
+    border: 5px solid #55BE69;
+}
+
+.teams {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-family: "FWC 2026 Condensed", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: #333333;
+    justify-content: space-between;
+    background: #000000cc;
+    color:#FFFFFF;
+    border-radius: 0px 0px 10px 10px;
+}
+
+.teams > div {
+    flex: 1;
+}
+
+.teams .vs {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.teams .vs .value {
+    font-family: "FWC 2026 Normal", sans-serif;
+    font-size: 16px;
+    background-color: #FFFFFF;
+    color: #000000;
+    width: 20px;
+    height: 20px;
+    border-radius: 5px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 4px;
+}
+
+.teams .team {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 6px;
+}
+
+.teams .team .team-name {
+    padding: 4px 8px;
+    font-size: 16px;
+    font-family: "FWC 2026 Normal", sans-serif;
+}
+
+.teams .team img {
+    width: 40%;
+    object-fit: cover;
+}
+
+.teams .team.t-1 {
+    justify-content: flex-start;
+}
+
+.teams .team.t-1 img {
+    border-radius: 0px 0px 0px 8px;
+}
+
+.teams .team.t-2 {
+    justify-content: flex-end;
+    border-radius: 0 8px 8px 0;
+}
+
+.teams .team.t-2 img {
+    border-radius: 0px 0px 8px 0px;
+}
