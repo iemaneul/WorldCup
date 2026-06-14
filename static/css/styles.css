@@ -293,7 +293,7 @@ body.is-transitioning {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-top: 4px;
+    padding-top: 2px;
 }
 
 .teams .team {
@@ -310,7 +310,8 @@ body.is-transitioning {
 }
 
 .teams .team img {
-    width: 40%;
+    width: 50px;
+    height: 35px;
     object-fit: cover;
 }
 
