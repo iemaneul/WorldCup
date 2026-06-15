@@ -10,34 +10,13 @@
     <link rel="stylesheet" href="static/css/styles.css">
     <script src="static/js/nav-component.js" defer></script>
     <script src="static/js/app-router.js" defer></script>
+    <script src="static/js/jogos-loader.js" defer></script>
 </head>
 <body class="page-jogos">
     <main id="page-content">
         <h1>Agenda de jogos</h1>
 
-        <div class="games-list">
-            <div class="game-card">
-                <div class="game-info group-a background fwc-normal">
-                    <span class="game-date">20/11/2022</span>
-                    <span class="game-time">13:00</span>
-                </div>
-                <div class="teams">
-                    <div class="team t-1">
-                        <img src="static/images/flags/mx.svg" alt="México">
-                        <span class="team-name">MEX</span>
-                    </div>
-                    <div class="vs">
-                        <span class="value">2</span>
-                        <span class="vs">vs</span>
-                        <span class="value">0</span>
-                    </div>
-                    <div class="team t-2">
-                        <span class="team-name">RSA</span>
-                        <img src="static/images/flags/za.svg" alt="África do Sul">
-                    </div>
-                </div>
-            </div>
-        </div>
+        <div class="games-list" data-games-list="static/partials/jogos-cards.html"></div>
     </main>
     <floating-nav current="jogos"></floating-nav>
 </body>

@@ -57,6 +57,8 @@ function swapPage(nextDocument, url, shouldPushState) {
 
     update();
 
+    document.dispatchEvent(new CustomEvent("page:content-swapped"));
+
     if (!canPartialSwap) {
         requestAnimationFrame(() => {
             document.body.classList.remove("is-transitioning");
